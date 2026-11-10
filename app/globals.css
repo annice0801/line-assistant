@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f8f7;
+  --surface: #ffffff;
+  --foreground: #1f2421;
+  --muted: #5c6660;
+  --line: #e1e5e2;
+  --accent: #06c755; /* LINE 綠 */
+  --accent-ink: #04893b; /* 白底上的連結與標題用深一點的綠，對比度足夠 */
+  --accent-soft: #e6f8ed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans), "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121513;
+    --surface: #1a1e1b;
+    --foreground: #e7ebe8;
+    --muted: #a3ada7;
+    --line: #2c322e;
+    --accent: #06c755;
+    --accent-ink: #4ade80;
+    --accent-soft: #163322;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
